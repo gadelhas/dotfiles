@@ -48,6 +48,17 @@ function digga() {
 	dig +nocmd "$1" any +multiline +noall +answer
 }
 
+function digs() {
+   dig +short "$1" "$2"
+}
+function digA() {
+   dig +short A "$1"
+}
+
+function digMX() {
+   dig +short MX "$1"
+}
+
 function tinker()
 {
   if [ -z "$1" ]
@@ -56,11 +67,6 @@ function tinker()
     else
        php artisan tinker --execute="dd($1);"
   fi
-}
-
-#shortcut voor zhs quick-look command
-function ql() {
-   quick-look "$1"
 }
 
 archive () {

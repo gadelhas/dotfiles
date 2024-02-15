@@ -97,3 +97,9 @@ eval "$(fnm env --use-on-cd)"
 
 # do not update all homebrew stuff automatically
 export HOMEBREW_NO_AUTO_UPDATE=1
+# bun completions
+[ -s "/Users/mario/.bun/_bun" ] && source "/Users/mario/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
